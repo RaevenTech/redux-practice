@@ -17,8 +17,18 @@ const Counter = () => {
         <section>
             <p>{count}</p>
             <div>
-                <button onClick={() => dispatch(increment())}>+</button>
-                <button onClick={() => dispatch(decrement())}>-</button>
+                <button
+                    className="addBtn"
+                    onClick={() => dispatch(increment())}
+                >
+                    +
+                </button>
+                <button
+                    className="removeBtn"
+                    onClick={() => dispatch(decrement())}
+                >
+                    -
+                </button>
             </div>
             <input
                 type="text"
@@ -26,10 +36,15 @@ const Counter = () => {
                 onChange={(e) => setIncremnetAmount(e.target.value)}
             />
             <div>
-                <button onClick={() => dispatch(incrementByAmount(addValue))}>
+                <button
+                    className="addAmountBtn"
+                    onClick={() => dispatch(incrementByAmount(addValue))}
+                >
                     Add Amount
                 </button>
-                <button onClick={resetAll}>Reset</button>
+                <button className="resetBtn" onClick={resetAll}>
+                    Reset
+                </button>
             </div>
         </section>
     );

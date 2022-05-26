@@ -45,3 +45,6 @@ button:first-child {
   margin-left: 0;
 }
 
+hr { 
+  box-shadow: 1px 1px black;
+}
